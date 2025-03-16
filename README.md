@@ -40,5 +40,4 @@ RentSure is a web application that automates rental agreement generation and sto
 - Ensure Firebase is set up and configured in your project.
 - Update environment variables if needed.
 
-## License
-This project is licensed under the MIT License.
+
