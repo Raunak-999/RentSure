@@ -7,7 +7,7 @@ RentSure is a web application that automates rental agreement generation and sto
 - **Firebase Integration**: Store and retrieve rental agreements securely.
 - **TailwindCSS for Styling**: Utilizes TailwindCSS for responsive design.
 - **TypeScript Support**: Built with TypeScript for better maintainability.
-
+ 
 ## Tech Stack
 - **Frontend**: HTML, CSS, TailwindCSS, TypeScript
 - **Backend**: Firebase for authentication, database, and storage
