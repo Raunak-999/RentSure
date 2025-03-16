@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cyberpunk Theme */
+:root {
+  --neon-blue: #00f3ff;
+  --neon-purple: #ff00ff;
+  --neon-cyan: #00ffff;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grid Pattern */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Neon Text Effect - Reduced Intensity */
+.neon-text {
+  text-shadow: 
+    0 0 3px rgba(0, 243, 255, 0.5),
+    0 0 5px rgba(0, 243, 255, 0.3);
+}
+
+/* Neon Border Effect - Reduced Intensity */
+.neon-border {
+  box-shadow:
+    0 0 3px rgba(0, 243, 255, 0.5),
+    0 0 5px rgba(0, 243, 255, 0.3);
+}
+
+/* Typing Effect */
+.typing-effect {
+  border-right: 2px solid rgba(0, 243, 255, 0.5);
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(0, 243, 255, 0.5) }
+}
+
+/* 3D Hover Effect */
+.hover-3d {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.hover-3d:hover {
+  transform: translateY(-5px) rotateX(5deg);
+}
+
+/* Gradient Animation */
+.gradient-animate {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 243, 255, 0.1),
+    rgba(255, 0, 255, 0.1),
+    rgba(0, 255, 255, 0.1)
+  );
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 243, 255, 0.3),
+    rgba(255, 0, 255, 0.3)
+  );
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 255, 0.3),
+    rgba(0, 255, 255, 0.3)
+  );
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text;
+  }
+}
